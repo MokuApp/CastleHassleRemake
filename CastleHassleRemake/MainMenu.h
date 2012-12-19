@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "BaseMenu.h"
 #import "SimpleAudioEngine.h"
 #define MAIN_MENU_LAYER 101
 
@@ -23,11 +24,14 @@
 @end
 
 
-@interface MainMenuLayer : CCLayer {
+@interface MainMenuLayer : BaseMenu {
     CCSprite* bg;
 }
 
 
-
+-(void)singlePlayer: (id)sender;
+-(void)settings: (id)sender;
+-(void)howToPlay: (id)sender;
+-(void)campaign: (id)sender;
 
 @end

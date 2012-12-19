@@ -160,6 +160,12 @@
 		3599CF7E16805B7E0053A897 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CF7D16805B7E0053A897 /* blocks.png */; };
 		3599CF8616805CF90053A897 /* MainMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CF8516805CF90053A897 /* MainMenu.mm */; };
 		3599CF8B168063DD0053A897 /* background-music.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3599CF8A168063DD0053A897 /* background-music.caf */; };
+		3599CF921680CA2E0053A897 /* BaseMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CF911680CA2E0053A897 /* BaseMenu.mm */; };
+		3599CF961680CDA70053A897 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3599CF951680CDA70053A897 /* background.jpg */; };
+		3599CF981680CF030053A897 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CF971680CF030053A897 /* logo.png */; };
+		3599CF9A1680CF9D0053A897 /* splashNavBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CF991680CF9D0053A897 /* splashNavBack.png */; };
+		3599CF9D16818F9E0053A897 /* stdButtons.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CF9B16818F9D0053A897 /* stdButtons.png */; };
+		3599CF9E16818F9E0053A897 /* stdButtonsPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CF9C16818F9D0053A897 /* stdButtonsPressed.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -475,6 +481,14 @@
 		3599CF8416805CF90053A897 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
 		3599CF8516805CF90053A897 /* MainMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainMenu.mm; sourceTree = "<group>"; };
 		3599CF8A168063DD0053A897 /* background-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "background-music.caf"; path = "Resources/background-music.caf"; sourceTree = "<group>"; };
+		3599CF8D1680C7800053A897 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		3599CF901680CA2E0053A897 /* BaseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMenu.h; sourceTree = "<group>"; };
+		3599CF911680CA2E0053A897 /* BaseMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseMenu.mm; sourceTree = "<group>"; };
+		3599CF951680CDA70053A897 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = Resources/Images/Misc/background.jpg; sourceTree = "<group>"; };
+		3599CF971680CF030053A897 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Resources/Images/Misc/logo.png; sourceTree = "<group>"; };
+		3599CF991680CF9D0053A897 /* splashNavBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splashNavBack.png; path = Resources/Images/Misc/splashNavBack.png; sourceTree = "<group>"; };
+		3599CF9B16818F9D0053A897 /* stdButtons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stdButtons.png; path = Resources/Images/Misc/stdButtons.png; sourceTree = "<group>"; };
+		3599CF9C16818F9D0053A897 /* stdButtonsPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stdButtonsPressed.png; path = Resources/Images/Misc/stdButtonsPressed.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -542,6 +556,7 @@
 		3599CDAC16805B780053A897 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3599CF931680CD230053A897 /* Images */,
 				3599CF89168063A00053A897 /* Sound */,
 				3599CDAD16805B780053A897 /* Default.png */,
 				3599CDAF16805B780053A897 /* fps_images.png */,
@@ -1009,6 +1024,8 @@
 		3599CF8816805DBA0053A897 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3599CF8E1680C9240053A897 /* Menus */,
+				3599CF8C1680C7520053A897 /* Utils */,
 				3599CF7016805B7E0053A897 /* AppDelegate.h */,
 				3599CF7116805B7E0053A897 /* AppDelegate.mm */,
 				3599CF8416805CF90053A897 /* MainMenu.h */,
@@ -1028,6 +1045,51 @@
 				3599CF8A168063DD0053A897 /* background-music.caf */,
 			);
 			name = Sound;
+			sourceTree = "<group>";
+		};
+		3599CF8C1680C7520053A897 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3599CF8D1680C7800053A897 /* Macros.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3599CF8E1680C9240053A897 /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				3599CF8F1680C92E0053A897 /* MenuItems */,
+			);
+			name = Menus;
+			sourceTree = "<group>";
+		};
+		3599CF8F1680C92E0053A897 /* MenuItems */ = {
+			isa = PBXGroup;
+			children = (
+				3599CF901680CA2E0053A897 /* BaseMenu.h */,
+				3599CF911680CA2E0053A897 /* BaseMenu.mm */,
+			);
+			name = MenuItems;
+			sourceTree = "<group>";
+		};
+		3599CF931680CD230053A897 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3599CF941680CD2C0053A897 /* Misc */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		3599CF941680CD2C0053A897 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				3599CF9B16818F9D0053A897 /* stdButtons.png */,
+				3599CF9C16818F9D0053A897 /* stdButtonsPressed.png */,
+				3599CF991680CF9D0053A897 /* splashNavBack.png */,
+				3599CF971680CF030053A897 /* logo.png */,
+				3599CF951680CDA70053A897 /* background.jpg */,
+			);
+			name = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1092,6 +1154,11 @@
 				3599CDBF16805B790053A897 /* iTunesArtwork in Resources */,
 				3599CF7E16805B7E0053A897 /* blocks.png in Resources */,
 				3599CF8B168063DD0053A897 /* background-music.caf in Resources */,
+				3599CF961680CDA70053A897 /* background.jpg in Resources */,
+				3599CF981680CF030053A897 /* logo.png in Resources */,
+				3599CF9A1680CF9D0053A897 /* splashNavBack.png in Resources */,
+				3599CF9D16818F9E0053A897 /* stdButtons.png in Resources */,
+				3599CF9E16818F9E0053A897 /* stdButtonsPressed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1236,6 +1303,7 @@
 				3599CF7516805B7E0053A897 /* RootViewController.m in Sources */,
 				3599CF7B16805B7E0053A897 /* GLES-Render.mm in Sources */,
 				3599CF8616805CF90053A897 /* MainMenu.mm in Sources */,
+				3599CF921680CA2E0053A897 /* BaseMenu.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

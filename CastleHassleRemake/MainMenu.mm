@@ -53,8 +53,54 @@ static MainMenu* instance = nil;
 -(id)init{
     if ((self=[super init])) {
         
+        bg = sprite(@"background.jpg");
+        [bg setPosition:ccp(240, 160)];
+        [self addChild:bg z:0];
+        
+        CCSprite* logo = sprite(@"logo.png");
+        [logo setPosition:ccp(240,245)];
+        [self addChild:logo z:0];
+        
+        CCSprite* navBack = sprite(@"splashNavBack.png");
+        [navBack setPosition:ccp(240,62)];
+        [self addChild:navBack z:0];
+        
+        
+        [CCMenuItemFont setFontSize:16];
+        [CCMenuItemFont setFontName:@"arial"];
+        
+        
+        [self makeButtonWithString:@"Single Player" atPosition:ccp(-70,-75) withSelector:@selector(singlePlayer:)];
+        
+        [self makeButtonWithString:@"Settings" atPosition:ccp(70,-121) withSelector:@selector(settings:)];
+        
+        [self makeButtonWithString:@"Campaign" atPosition:ccp(-70,-121) withSelector:@selector(campaign:)];
+        
+        [self makeButtonWithString:@"How-to-play" atPosition:ccp(70,-75) withSelector:@selector(howToPlay:)];
+
+        
     }
     return self;
+    
+}
+
+-(void)campaign:(id)sender
+{
+    
+}
+
+-(void)singlePlayer:(id)sender
+{
+    
+}
+
+-(void)settings:(id)sender
+{
+    
+}
+
+-(void)howToPlay:(id)sender
+{
     
 }
 
