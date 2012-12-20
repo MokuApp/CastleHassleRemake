@@ -166,6 +166,11 @@
 		3599CF9A1680CF9D0053A897 /* splashNavBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CF991680CF9D0053A897 /* splashNavBack.png */; };
 		3599CF9D16818F9E0053A897 /* stdButtons.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CF9B16818F9D0053A897 /* stdButtons.png */; };
 		3599CF9E16818F9E0053A897 /* stdButtonsPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CF9C16818F9D0053A897 /* stdButtonsPressed.png */; };
+		3599CFA41681BCAA0053A897 /* SinglePlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CFA31681BCA90053A897 /* SinglePlayer.mm */; };
+		3599CFA61681C0920053A897 /* menuBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFA51681C0910053A897 /* menuBack.png */; };
+		3599CFA91682F7490053A897 /* CHToggle.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CFA81682F7490053A897 /* CHToggle.mm */; };
+		3599CFAC1682F77B0053A897 /* CHToggleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3599CFAB1682F77A0053A897 /* CHToggleItem.m */; };
+		3599CFAE1683022F0053A897 /* comboButtons.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFAD1683022F0053A897 /* comboButtons.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -489,6 +494,14 @@
 		3599CF991680CF9D0053A897 /* splashNavBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splashNavBack.png; path = Resources/Images/Misc/splashNavBack.png; sourceTree = "<group>"; };
 		3599CF9B16818F9D0053A897 /* stdButtons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stdButtons.png; path = Resources/Images/Misc/stdButtons.png; sourceTree = "<group>"; };
 		3599CF9C16818F9D0053A897 /* stdButtonsPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stdButtonsPressed.png; path = Resources/Images/Misc/stdButtonsPressed.png; sourceTree = "<group>"; };
+		3599CFA21681BCA90053A897 /* SinglePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePlayer.h; sourceTree = "<group>"; };
+		3599CFA31681BCA90053A897 /* SinglePlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SinglePlayer.mm; sourceTree = "<group>"; };
+		3599CFA51681C0910053A897 /* menuBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuBack.png; path = Resources/Images/Misc/menuBack.png; sourceTree = "<group>"; };
+		3599CFA71682F7480053A897 /* CHToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHToggle.h; sourceTree = "<group>"; };
+		3599CFA81682F7490053A897 /* CHToggle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CHToggle.mm; sourceTree = "<group>"; };
+		3599CFAA1682F77A0053A897 /* CHToggleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHToggleItem.h; sourceTree = "<group>"; };
+		3599CFAB1682F77A0053A897 /* CHToggleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHToggleItem.m; sourceTree = "<group>"; };
+		3599CFAD1683022F0053A897 /* comboButtons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = comboButtons.png; path = Resources/Images/Misc/comboButtons.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1028,8 +1041,6 @@
 				3599CF8C1680C7520053A897 /* Utils */,
 				3599CF7016805B7E0053A897 /* AppDelegate.h */,
 				3599CF7116805B7E0053A897 /* AppDelegate.mm */,
-				3599CF8416805CF90053A897 /* MainMenu.h */,
-				3599CF8516805CF90053A897 /* MainMenu.mm */,
 				3599CF7316805B7E0053A897 /* RootViewController.h */,
 				3599CF7416805B7E0053A897 /* RootViewController.m */,
 				3599CF7916805B7E0053A897 /* GLES-Render.h */,
@@ -1059,6 +1070,10 @@
 			isa = PBXGroup;
 			children = (
 				3599CF8F1680C92E0053A897 /* MenuItems */,
+				3599CFA21681BCA90053A897 /* SinglePlayer.h */,
+				3599CFA31681BCA90053A897 /* SinglePlayer.mm */,
+				3599CF8416805CF90053A897 /* MainMenu.h */,
+				3599CF8516805CF90053A897 /* MainMenu.mm */,
 			);
 			name = Menus;
 			sourceTree = "<group>";
@@ -1068,6 +1083,10 @@
 			children = (
 				3599CF901680CA2E0053A897 /* BaseMenu.h */,
 				3599CF911680CA2E0053A897 /* BaseMenu.mm */,
+				3599CFA71682F7480053A897 /* CHToggle.h */,
+				3599CFA81682F7490053A897 /* CHToggle.mm */,
+				3599CFAA1682F77A0053A897 /* CHToggleItem.h */,
+				3599CFAB1682F77A0053A897 /* CHToggleItem.m */,
 			);
 			name = MenuItems;
 			sourceTree = "<group>";
@@ -1083,6 +1102,8 @@
 		3599CF941680CD2C0053A897 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				3599CFAD1683022F0053A897 /* comboButtons.png */,
+				3599CFA51681C0910053A897 /* menuBack.png */,
 				3599CF9B16818F9D0053A897 /* stdButtons.png */,
 				3599CF9C16818F9D0053A897 /* stdButtonsPressed.png */,
 				3599CF991680CF9D0053A897 /* splashNavBack.png */,
@@ -1159,6 +1180,8 @@
 				3599CF9A1680CF9D0053A897 /* splashNavBack.png in Resources */,
 				3599CF9D16818F9E0053A897 /* stdButtons.png in Resources */,
 				3599CF9E16818F9E0053A897 /* stdButtonsPressed.png in Resources */,
+				3599CFA61681C0920053A897 /* menuBack.png in Resources */,
+				3599CFAE1683022F0053A897 /* comboButtons.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1304,6 +1327,9 @@
 				3599CF7B16805B7E0053A897 /* GLES-Render.mm in Sources */,
 				3599CF8616805CF90053A897 /* MainMenu.mm in Sources */,
 				3599CF921680CA2E0053A897 /* BaseMenu.mm in Sources */,
+				3599CFA41681BCAA0053A897 /* SinglePlayer.mm in Sources */,
+				3599CFA91682F7490053A897 /* CHToggle.mm in Sources */,
+				3599CFAC1682F77B0053A897 /* CHToggleItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "MainMenu.h"
+#import "SinglePlayer.h"
 
 
 @implementation MainMenu
@@ -91,6 +92,9 @@ static MainMenu* instance = nil;
 
 -(void)singlePlayer:(id)sender
 {
+    MainMenu* main = [MainMenu instance];
+    [main removeChild:self cleanup:YES];
+    [main addChild:[SinglePlayer node]];
     
 }
 
