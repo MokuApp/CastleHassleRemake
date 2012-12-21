@@ -9,6 +9,8 @@
 #import "SinglePlayer.h"
 #import "CHToggle.h"
 #import "CHToggleItem.h"
+#import "MainMenu.h"
+#import "MainScene.h"
 
 
 @implementation SinglePlayer
@@ -131,6 +133,27 @@ static SinglePlayer* instance = nil;
         [environment setPosition:ccp(-15,-55)];
         [self addChild:environment z:3];
         
+        CCLabelTTF* difficultyLabel = [CCLabelTTF labelWithString:@"Difficulty" fontName:@"Arial-BoldMT" fontSize:18];
+        [difficultyLabel setColor:ccc3(15, 147, 222)];
+        [difficultyLabel setAnchorPoint:ccp(0,0)];
+        difficultyLabel.position = ccp(20,235);
+        [self addChild:difficultyLabel];
+        
+        CCLabelTTF* opponentsLabel = [CCLabelTTF labelWithString:@"Opponents" fontName:@"Arial-BoldMT" fontSize:18];
+        [opponentsLabel setColor:ccc3(15, 147, 222)];
+        [opponentsLabel setAnchorPoint:ccp(0,0)];
+        opponentsLabel.position = ccp(20,175);
+        [self addChild:opponentsLabel];
+
+        CCLabelTTF* environmentLabel = [CCLabelTTF labelWithString:@"Environment" fontName:@"Arial-BoldMT" fontSize:18];
+        [environmentLabel setColor:ccc3(15, 147, 222)];
+        [environmentLabel setAnchorPoint:ccp(0,0)];
+        environmentLabel.position = ccp(20,110);
+        [self addChild:environmentLabel];
+        
+        [self makeButtonWithString:@"Start Game" atPosition:ccp(150,-120) withSelector:@selector(startGame:)];
+        [self makeButtonWithString:@"Back" atPosition:ccp(-150,-120) withSelector:@selector(previousScreen:)];
+        
     }
     if (!instance) {
         instance = self;
@@ -139,5 +162,21 @@ static SinglePlayer* instance = nil;
     return self;
 }
 
+-(void)startGame:(id)sender{
+    
+    [[CCDirector sharedDirector] replaceScene:[MainScene scene]];
+}
+
+-(void)previousScreen:(id)sender{
+    MainMenu *main = [MainMenu instance];
+    [main removeChild:self cleanup:YES];
+    [main addChild:[MainMenuLayer node]];
+}
+
+
+-(void)dealloc{
+    [toggles release];
+    [super dealloc];
+}
 
 @end

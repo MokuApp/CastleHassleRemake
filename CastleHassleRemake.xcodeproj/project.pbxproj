@@ -171,6 +171,8 @@
 		3599CFA91682F7490053A897 /* CHToggle.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CFA81682F7490053A897 /* CHToggle.mm */; };
 		3599CFAC1682F77B0053A897 /* CHToggleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3599CFAB1682F77A0053A897 /* CHToggleItem.m */; };
 		3599CFAE1683022F0053A897 /* comboButtons.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFAD1683022F0053A897 /* comboButtons.png */; };
+		3599CFB11684532B0053A897 /* MainScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CFB0168453290053A897 /* MainScene.mm */; };
+		3599CFB41684547D0053A897 /* Battlefield.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CFB3168454790053A897 /* Battlefield.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -502,6 +504,10 @@
 		3599CFAA1682F77A0053A897 /* CHToggleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHToggleItem.h; sourceTree = "<group>"; };
 		3599CFAB1682F77A0053A897 /* CHToggleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHToggleItem.m; sourceTree = "<group>"; };
 		3599CFAD1683022F0053A897 /* comboButtons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = comboButtons.png; path = Resources/Images/Misc/comboButtons.png; sourceTree = "<group>"; };
+		3599CFAF168453240053A897 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		3599CFB0168453290053A897 /* MainScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainScene.mm; sourceTree = "<group>"; };
+		3599CFB2168454760053A897 /* Battlefield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Battlefield.h; sourceTree = "<group>"; };
+		3599CFB3168454790053A897 /* Battlefield.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Battlefield.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1041,6 +1047,8 @@
 				3599CF8C1680C7520053A897 /* Utils */,
 				3599CF7016805B7E0053A897 /* AppDelegate.h */,
 				3599CF7116805B7E0053A897 /* AppDelegate.mm */,
+				3599CFB2168454760053A897 /* Battlefield.h */,
+				3599CFB3168454790053A897 /* Battlefield.mm */,
 				3599CF7316805B7E0053A897 /* RootViewController.h */,
 				3599CF7416805B7E0053A897 /* RootViewController.m */,
 				3599CF7916805B7E0053A897 /* GLES-Render.h */,
@@ -1074,6 +1082,8 @@
 				3599CFA31681BCA90053A897 /* SinglePlayer.mm */,
 				3599CF8416805CF90053A897 /* MainMenu.h */,
 				3599CF8516805CF90053A897 /* MainMenu.mm */,
+				3599CFAF168453240053A897 /* MainScene.h */,
+				3599CFB0168453290053A897 /* MainScene.mm */,
 			);
 			name = Menus;
 			sourceTree = "<group>";
@@ -1330,6 +1340,8 @@
 				3599CFA41681BCAA0053A897 /* SinglePlayer.mm in Sources */,
 				3599CFA91682F7490053A897 /* CHToggle.mm in Sources */,
 				3599CFAC1682F77B0053A897 /* CHToggleItem.m in Sources */,
+				3599CFB11684532B0053A897 /* MainScene.mm in Sources */,
+				3599CFB41684547D0053A897 /* Battlefield.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

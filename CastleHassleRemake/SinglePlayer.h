@@ -22,5 +22,7 @@
 
 +(SinglePlayer*) instance;
 
+-(void)startGame: (id)sender;
+-(void)previousScreen: (id)sender;
 
 @end
