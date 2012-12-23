@@ -8,11 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "SimpleAudioEngine.h"
 
 @interface Battlefield : CCLayer {
     
 }
 
+
+@property(nonatomic, retain) NSMutableArray *tileables;
+
+
 +(Battlefield*)instance;
+
+
 
 @end

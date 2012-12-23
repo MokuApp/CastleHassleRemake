@@ -159,7 +159,6 @@
 		3599CF7B16805B7E0053A897 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CF7A16805B7E0053A897 /* GLES-Render.mm */; };
 		3599CF7E16805B7E0053A897 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CF7D16805B7E0053A897 /* blocks.png */; };
 		3599CF8616805CF90053A897 /* MainMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CF8516805CF90053A897 /* MainMenu.mm */; };
-		3599CF8B168063DD0053A897 /* background-music.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3599CF8A168063DD0053A897 /* background-music.caf */; };
 		3599CF921680CA2E0053A897 /* BaseMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CF911680CA2E0053A897 /* BaseMenu.mm */; };
 		3599CF961680CDA70053A897 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3599CF951680CDA70053A897 /* background.jpg */; };
 		3599CF981680CF030053A897 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CF971680CF030053A897 /* logo.png */; };
@@ -173,6 +172,15 @@
 		3599CFAE1683022F0053A897 /* comboButtons.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFAD1683022F0053A897 /* comboButtons.png */; };
 		3599CFB11684532B0053A897 /* MainScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CFB0168453290053A897 /* MainScene.mm */; };
 		3599CFB41684547D0053A897 /* Battlefield.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CFB3168454790053A897 /* Battlefield.mm */; };
+		3599CFBB16845F330053A897 /* background-music.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFB916845F330053A897 /* background-music.caf */; };
+		3599CFBC16845F330053A897 /* backGroundMusic.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFBA16845F330053A897 /* backGroundMusic.caf */; };
+		3599CFC11685DC4E0053A897 /* Background.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CFC01685DC4E0053A897 /* Background.mm */; };
+		3599CFCA1685E54F0053A897 /* bbackLeft.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFC41685E54F0053A897 /* bbackLeft.jpg */; };
+		3599CFCB1685E54F0053A897 /* bbackRight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFC51685E54F0053A897 /* bbackRight.jpg */; };
+		3599CFCC1685E54F0053A897 /* bfrontLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFC61685E54F0053A897 /* bfrontLeft.png */; };
+		3599CFCD1685E54F0053A897 /* bfrontRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFC71685E54F0053A897 /* bfrontRight.png */; };
+		3599CFCE1685E54F0053A897 /* bmiddleLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFC81685E54F0053A897 /* bmiddleLeft.png */; };
+		3599CFCF1685E54F0053A897 /* bmiddleRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFC91685E54F0053A897 /* bmiddleRight.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -487,7 +495,6 @@
 		3599CF7D16805B7E0053A897 /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
 		3599CF8416805CF90053A897 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
 		3599CF8516805CF90053A897 /* MainMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainMenu.mm; sourceTree = "<group>"; };
-		3599CF8A168063DD0053A897 /* background-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "background-music.caf"; path = "Resources/background-music.caf"; sourceTree = "<group>"; };
 		3599CF8D1680C7800053A897 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		3599CF901680CA2E0053A897 /* BaseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMenu.h; sourceTree = "<group>"; };
 		3599CF911680CA2E0053A897 /* BaseMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseMenu.mm; sourceTree = "<group>"; };
@@ -508,6 +515,16 @@
 		3599CFB0168453290053A897 /* MainScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainScene.mm; sourceTree = "<group>"; };
 		3599CFB2168454760053A897 /* Battlefield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Battlefield.h; sourceTree = "<group>"; };
 		3599CFB3168454790053A897 /* Battlefield.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Battlefield.mm; sourceTree = "<group>"; };
+		3599CFB916845F330053A897 /* background-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "background-music.caf"; path = "Resources/Sound/background-music.caf"; sourceTree = "<group>"; };
+		3599CFBA16845F330053A897 /* backGroundMusic.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = backGroundMusic.caf; path = Resources/Sound/backGroundMusic.caf; sourceTree = "<group>"; };
+		3599CFBF1685DC4E0053A897 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		3599CFC01685DC4E0053A897 /* Background.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Background.mm; sourceTree = "<group>"; };
+		3599CFC41685E54F0053A897 /* bbackLeft.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bbackLeft.jpg; path = Resources/Images/Backgrounds/Brittany/bbackLeft.jpg; sourceTree = "<group>"; };
+		3599CFC51685E54F0053A897 /* bbackRight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bbackRight.jpg; path = Resources/Images/Backgrounds/Brittany/bbackRight.jpg; sourceTree = "<group>"; };
+		3599CFC61685E54F0053A897 /* bfrontLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bfrontLeft.png; path = Resources/Images/Backgrounds/Brittany/bfrontLeft.png; sourceTree = "<group>"; };
+		3599CFC71685E54F0053A897 /* bfrontRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bfrontRight.png; path = Resources/Images/Backgrounds/Brittany/bfrontRight.png; sourceTree = "<group>"; };
+		3599CFC81685E54F0053A897 /* bmiddleLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bmiddleLeft.png; path = Resources/Images/Backgrounds/Brittany/bmiddleLeft.png; sourceTree = "<group>"; };
+		3599CFC91685E54F0053A897 /* bmiddleRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bmiddleRight.png; path = Resources/Images/Backgrounds/Brittany/bmiddleRight.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1045,6 +1062,7 @@
 			children = (
 				3599CF8E1680C9240053A897 /* Menus */,
 				3599CF8C1680C7520053A897 /* Utils */,
+				3599CFBE1685DBCE0053A897 /* Backgrounds */,
 				3599CF7016805B7E0053A897 /* AppDelegate.h */,
 				3599CF7116805B7E0053A897 /* AppDelegate.mm */,
 				3599CFB2168454760053A897 /* Battlefield.h */,
@@ -1061,7 +1079,8 @@
 		3599CF89168063A00053A897 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				3599CF8A168063DD0053A897 /* background-music.caf */,
+				3599CFB916845F330053A897 /* background-music.caf */,
+				3599CFBA16845F330053A897 /* backGroundMusic.caf */,
 			);
 			name = Sound;
 			sourceTree = "<group>";
@@ -1104,6 +1123,7 @@
 		3599CF931680CD230053A897 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3599CFC21685E4ED0053A897 /* Backgrounds */,
 				3599CF941680CD2C0053A897 /* Misc */,
 			);
 			name = Images;
@@ -1121,6 +1141,36 @@
 				3599CF951680CDA70053A897 /* background.jpg */,
 			);
 			name = Misc;
+			sourceTree = "<group>";
+		};
+		3599CFBE1685DBCE0053A897 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				3599CFBF1685DC4E0053A897 /* Background.h */,
+				3599CFC01685DC4E0053A897 /* Background.mm */,
+			);
+			name = Backgrounds;
+			sourceTree = "<group>";
+		};
+		3599CFC21685E4ED0053A897 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				3599CFC31685E5110053A897 /* Brittany */,
+			);
+			name = Backgrounds;
+			sourceTree = "<group>";
+		};
+		3599CFC31685E5110053A897 /* Brittany */ = {
+			isa = PBXGroup;
+			children = (
+				3599CFC41685E54F0053A897 /* bbackLeft.jpg */,
+				3599CFC51685E54F0053A897 /* bbackRight.jpg */,
+				3599CFC61685E54F0053A897 /* bfrontLeft.png */,
+				3599CFC71685E54F0053A897 /* bfrontRight.png */,
+				3599CFC81685E54F0053A897 /* bmiddleLeft.png */,
+				3599CFC91685E54F0053A897 /* bmiddleRight.png */,
+			);
+			name = Brittany;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1184,7 +1234,6 @@
 				3599CDBC16805B780053A897 /* Icon@2x.png in Resources */,
 				3599CDBF16805B790053A897 /* iTunesArtwork in Resources */,
 				3599CF7E16805B7E0053A897 /* blocks.png in Resources */,
-				3599CF8B168063DD0053A897 /* background-music.caf in Resources */,
 				3599CF961680CDA70053A897 /* background.jpg in Resources */,
 				3599CF981680CF030053A897 /* logo.png in Resources */,
 				3599CF9A1680CF9D0053A897 /* splashNavBack.png in Resources */,
@@ -1192,6 +1241,14 @@
 				3599CF9E16818F9E0053A897 /* stdButtonsPressed.png in Resources */,
 				3599CFA61681C0920053A897 /* menuBack.png in Resources */,
 				3599CFAE1683022F0053A897 /* comboButtons.png in Resources */,
+				3599CFBB16845F330053A897 /* background-music.caf in Resources */,
+				3599CFBC16845F330053A897 /* backGroundMusic.caf in Resources */,
+				3599CFCA1685E54F0053A897 /* bbackLeft.jpg in Resources */,
+				3599CFCB1685E54F0053A897 /* bbackRight.jpg in Resources */,
+				3599CFCC1685E54F0053A897 /* bfrontLeft.png in Resources */,
+				3599CFCD1685E54F0053A897 /* bfrontRight.png in Resources */,
+				3599CFCE1685E54F0053A897 /* bmiddleLeft.png in Resources */,
+				3599CFCF1685E54F0053A897 /* bmiddleRight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1342,6 +1399,7 @@
 				3599CFAC1682F77B0053A897 /* CHToggleItem.m in Sources */,
 				3599CFB11684532B0053A897 /* MainScene.mm in Sources */,
 				3599CFB41684547D0053A897 /* Battlefield.mm in Sources */,
+				3599CFC11685DC4E0053A897 /* Background.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1437,6 +1495,7 @@
 				3599CF8316805B7E0053A897 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

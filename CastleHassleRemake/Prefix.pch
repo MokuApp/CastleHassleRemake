@@ -13,3 +13,11 @@
 #import <Foundation/Foundation.h>
 #import "Macros.h"
 #endif
+
+
+
+
+//index properties 
+#define FOREGROUND_Z_INDEX 5
+#define MIDGROUND_Z_INDEX 3
+#define BACKGROUND_Z_INDEX 1
