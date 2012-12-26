@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface Background : NSObject
+@interface Background : NSObject{
+    
+    float parallaxFactor;
+}
 
 
 @property(nonatomic) float parallaxFactor;
@@ -21,5 +24,10 @@
         imageDimension:(CGPoint)dim layer:(CCLayer*)parent 
                  index:(int)index 
         parallaxFactor:(float)pf;
+
+
+-(int) cameraOutOfBounds:(CGPoint)pos;
+-(void)positionForCameraLoc:(CGPoint)loc;
+-(void)repositionSprite:(CGPoint)pos result:(int)res;
 
 @end

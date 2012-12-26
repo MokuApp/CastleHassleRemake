@@ -21,6 +21,8 @@
     
     if ((self = [super init])) {
         
+        parallaxFactor = pf;
+        
         CGSize screenSize = [CCDirector sharedDirector].winSize;
         
         self.imageA = spriteWithRect(lImg, CGRectMake(0, 0, dim.x, dim.y));
@@ -33,6 +35,60 @@
         self.imageB.anchorPoint = ccp(0, .5);
         [parent addChild:self.imageB z:index];
         
+    }
+    return self;
+}
+
+-(float) getExtremeLeft{
+    
+    return MIN(imageA.position.x, imageB.position.x);
+}
+
+-(float) getExtremeRight{
+    return MAX(imageA.position.x + imageA.textureRect.size.width, imageB.position.x + imageB.textureRect.size.width);
+}
+
+-(CCSprite*) getUnseenSprite:(CGPoint)pos result:(int)res{
+    
+    if (res >0) {
+        return imageA.position.x < imageB.position.x ? imageA : imageB;
+    } else {
+        return imageA.position.x > imageB.position.x ? imageA : imageB;
+    }
+}
+
+-(int)cameraOutOfBounds:(CGPoint)pos{
+    
+    float screenWidth = MAX([CCDirector sharedDirector].winSize.width, [CCDirector sharedDirector].winSize.height);
+    
+    float extremeLeft = [self getExtremeLeft];
+    float extremeRight = [self getExtremeRight];
+    CCLOG(@"cameraOutOfBounds posx[%f] extremL[%f] extremeR[%f] Rsub[%f]",pos.x,extremeLeft,extremeRight,extremeRight - screenWidth);
+    
+    if(pos.x < extremeLeft){
+        return -1;
+    }
+    if (pos.x > extremeRight - screenWidth) {
+        return 1;
+    }
+    return 0;
+    
+}
+
+-(void)repositionSprite:(CGPoint)pos result:(int)res{
+    
+    CCSprite *sprite = [self getUnseenSprite:pos result:res];
+    CCLOG(@"reposition sprite %@",sprite);
+    sprite.position = ccp(sprite.textureRect.size.width * 2 * res + (-2 * res) + sprite.position.x, sprite.position.y);
+}
+
+-(void)positionForCameraLoc:(CGPoint)loc{
+    
+    int res;
+    CCLOG(@"loc x is %f, y is %f",loc.x, loc.y);
+    if ((res = [self cameraOutOfBounds:loc])) {
+        CCLOG(@"return res it %d",res);
+        [self repositionSprite:loc result:res];
     }
     
 }

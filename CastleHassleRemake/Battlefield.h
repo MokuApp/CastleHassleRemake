@@ -12,6 +12,8 @@
 
 @interface Battlefield : CCLayer {
     
+    CGPoint initialTouch;
+    float screenMomentum;
 }
 
 
@@ -21,5 +23,9 @@
 +(Battlefield*)instance;
 
 
+-(void)tileImagePool:(CGPoint)loc delta:(CGPoint)d;
+-(void)moveScreen;
+
+-(CGPoint) transformTouchesToPoint:(NSSet*)touches withCameraOffset:(BOOL)cam;
 
 @end
