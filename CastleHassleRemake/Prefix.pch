@@ -12,12 +12,33 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "Macros.h"
-#endif
 
 
+
+#define PTM_RATIO 32.0
 
 
 //index properties 
 #define FOREGROUND_Z_INDEX 5
 #define MIDGROUND_Z_INDEX 3
 #define BACKGROUND_Z_INDEX 1
+
+#define PIECE_Z_INDEX 4
+#define FAR_PIECE_Z_INDEX 2
+
+
+#define CITY_IMAGE @"city.png"
+
+//pieces
+#define TOWER_IMAGE @"tower.png"
+
+
+//environment variables
+#define PLAYER_GROUND_HEIGHT 45.0
+#define PLAYER_GROUND_WIDTH 720.0
+#define PLAYER_BACKGROUND_HEIGHT 65.0
+#define BACKGROUND_SCALE_FACTOR 1.5
+
+
+
+#endif

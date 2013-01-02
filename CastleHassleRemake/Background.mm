@@ -63,7 +63,6 @@
     
     float extremeLeft = [self getExtremeLeft];
     float extremeRight = [self getExtremeRight];
-    CCLOG(@"cameraOutOfBounds posx[%f] extremL[%f] extremeR[%f] Rsub[%f]",pos.x,extremeLeft,extremeRight,extremeRight - screenWidth);
     
     if(pos.x < extremeLeft){
         return -1;
@@ -78,16 +77,13 @@
 -(void)repositionSprite:(CGPoint)pos result:(int)res{
     
     CCSprite *sprite = [self getUnseenSprite:pos result:res];
-    CCLOG(@"reposition sprite %@",sprite);
     sprite.position = ccp(sprite.textureRect.size.width * 2 * res + (-2 * res) + sprite.position.x, sprite.position.y);
 }
 
 -(void)positionForCameraLoc:(CGPoint)loc{
     
     int res;
-    CCLOG(@"loc x is %f, y is %f",loc.x, loc.y);
     if ((res = [self cameraOutOfBounds:loc])) {
-        CCLOG(@"return res it %d",res);
         [self repositionSprite:loc result:res];
     }
     
