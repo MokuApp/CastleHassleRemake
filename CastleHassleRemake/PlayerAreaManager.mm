@@ -5,9 +5,10 @@
 //  Created by tedant on 12/12/27.
 //  Copyright (c) 2012 MokuApp. All rights reserved.
 //
-
+#import "PlayerArea.h"
 #import "PlayerAreaManager.h"
 #import "Battlefield.h"
+#import "AI.h"
 
 @implementation PlayerAreaManager
 
@@ -50,12 +51,13 @@
 
 -(void)loadPlayer{
     
-    NSString* file = @"player";
+//    NSString* file = @"player";
     for (uint i = 0; i < 2; i++) {
         BOOL indexIsPlayer = i == 0;
         if (indexIsPlayer) {
             PlayerArea* pa = [playerAreas objectAtIndex:i];
-            [[Battlefield instance] loadForPlayer:pa file:file];
+            pa.ai = [AI aiWithPlayer:pa];
+            //[[Battlefield instance] loadForPlayer:pa file:file];
         }
     }
 }

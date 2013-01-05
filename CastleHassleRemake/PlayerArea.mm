@@ -7,16 +7,17 @@
 //
 
 #import "PlayerArea.h"
-
+#import "AI.h"
 
 @implementation PlayerArea
 
-@synthesize city;
+@synthesize ai,city;
 
 -(id)initWithLeft:(float)left dimentions:(CGPoint)dim{
     
     
     if ((self = [super init])) {
+        self.ai = nil;
 
     }
     return self;

@@ -10,6 +10,12 @@
 #import "Background.h"
 #import "PlayerAreaManager.h"
 #import "PlayerArea.h"
+#import "Piece.h"
+#import "Weapon.h"
+#import "Tower.h"
+#import "Cannon.h"
+#import "City.h"
+#import "Projectile.h"
 
 #import "AppDelegate.h"
 #import "JSONKit.h"
@@ -17,7 +23,7 @@
 
 @implementation Battlefield
 
-@synthesize tileables,playerAreaManager;
+@synthesize tileables,playerAreaManager,world,bin;
 
 static Battlefield* instance = nil;
 
@@ -52,8 +58,20 @@ static Battlefield* instance = nil;
         [backgroundSound playBackgroundMusic:@"backGroundMusic.caf"];
         
         self.tileables = [NSMutableArray array];
+        self.bin = [NSMutableArray array];
+        gameTime = 0.0;
         
         self.isTouchEnabled = YES;
+        
+        //setting gravity
+        b2Vec2 gravity;
+        gravity.Set(0.0f, -9.0f);
+        
+        bool doSleep = true;
+        
+        world = new b2World(gravity, doSleep);
+        
+        
         
         
         
@@ -85,11 +103,51 @@ static Battlefield* instance = nil;
         self.playerAreaManager = [[[PlayerAreaManager alloc] initWithPlayerAreaWorld] autorelease];
         [playerAreaManager loadPlayer];
         
+        [self schedule: @selector(tick:)];
+        
         screenMomentum = 0.0;
         [self moveScreen];
         
     }
     return self;
+}
+
+
+-(void) tick: (ccTime) dt {
+    
+    
+    int32 velocityIterations = 8;
+    int32 positionIterations = 3;
+    
+    world->Step(dt, velocityIterations, positionIterations);
+    
+    gameTime += dt;
+    
+    
+    for (b2Body* b = world->GetBodyList(); b; b = b->GetNext()) {
+        
+        if (b->GetUserData() != NULL && ![(NSObject*)b->GetUserData() isKindOfClass:[PlayerArea class]]) {
+
+            Piece* piece = (Piece*)b->GetUserData();
+            b2Vec2 pos = b->GetPosition();
+            float ang = b->GetAngle();
+            
+            piece.currentSprite.position = ccp(pos.x*PTM_RATIO, pos.y*PTM_RATIO);
+            piece.currentSprite.rotation = -1 * CC_RADIANS_TO_DEGREES(ang);
+            
+            if ([piece isKindOfClass:[Weapon class]]) {
+                [(Weapon*)piece updateSpritesAngle:ang position:pos time:dt];
+            }
+            if ([piece isKindOfClass:[City class]]) {
+
+            }
+            if ([piece isKindOfClass:[Projectile class]]) {
+                [(Projectile*)piece updateSpritePosition:pos body:b];
+            }
+
+        }
+    }
+     
 }
 
 
@@ -171,6 +229,7 @@ static Battlefield* instance = nil;
     
     for (NSDictionary* data in state) {
         
+        CCLOG(@"data is %@",data);
         NSMethodSignature *sig;
         SEL func = @selector(addNewPieceWithCoords:andClass:withImageNam:finalize:player:);
         
@@ -198,11 +257,22 @@ static Battlefield* instance = nil;
 }
 
 -(void) addNewPieceWithCoords:(CGPoint)p andClass:(Class)c withImageNam:(NSString *)manageNam finalize:(BOOL)finalize player:(PlayerArea *)player{
-    Piece *piece = [[[c alloc] initWithWorld:p] autorelease];
+    
+    CCLOG(@"class is %@",c);
+    Piece *piece = [[[c alloc] initWithWorld:world coords:p] autorelease];
     
     piece.owner = player;
     
+    if (finalize) {
+        [piece finalizePiece];
+    }
     
+    [self.bin addObject:piece];
+}
+
+
+-(void) addProjectileToBin:(Projectile *)p{
+    [self.bin addObject:p];
 }
 
 @end

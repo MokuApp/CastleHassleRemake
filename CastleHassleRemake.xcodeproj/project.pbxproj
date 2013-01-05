@@ -187,9 +187,19 @@
 		3599CFEF168CAFF00053A897 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3599CFEE168CAFF00053A897 /* JSONKit.m */; };
 		3599CFF3168ED5650053A897 /* Tower.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CFF2168ED5650053A897 /* Tower.mm */; };
 		3599CFF6168EE08C0053A897 /* tower.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFF5168EE08C0053A897 /* tower.png */; };
-		3599CFF9168EE4520053A897 /* player.dat in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFF8168EE4520053A897 /* player.dat */; };
-		3599CFFC16931A120053A897 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 3599CFFB16931A110053A897 /* City.m */; };
+		3599CFFC16931A120053A897 /* City.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599CFFB16931A110053A897 /* City.mm */; };
 		3599CFFE169327780053A897 /* city.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599CFFD169327770053A897 /* city.png */; };
+		3599D00D1695F4480053A897 /* Weapon.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599D00C1695F4480053A897 /* Weapon.mm */; };
+		3599D0111695F87E0053A897 /* AI.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599D0101695F87E0053A897 /* AI.mm */; };
+		3599D0141695FF6D0053A897 /* Cannon.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599D0131695FF6C0053A897 /* Cannon.mm */; };
+		3599D016169601C00053A897 /* cannon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599D015169601C00053A897 /* cannon.png */; };
+		3599D0191696B5B60053A897 /* shootIndicatorTail.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599D0171696B5B60053A897 /* shootIndicatorTail.png */; };
+		3599D01A1696B5B60053A897 /* shootIndicatorTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599D0181696B5B60053A897 /* shootIndicatorTop.png */; };
+		3599D01C1696B9590053A897 /* cannon.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3599D01B1696B9590053A897 /* cannon.caf */; };
+		3599D0201696BBCC0053A897 /* Projectile.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599D01F1696BBCC0053A897 /* Projectile.mm */; };
+		3599D0231696BC160053A897 /* CannonBall.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3599D0221696BC150053A897 /* CannonBall.mm */; };
+		3599D025169712B90053A897 /* cannonball.png in Resources */ = {isa = PBXBuildFile; fileRef = 3599D024169712B90053A897 /* cannonball.png */; };
+		3599D02716973B7E0053A897 /* player.dat in Resources */ = {isa = PBXBuildFile; fileRef = 3599D02616973B7E0053A897 /* player.dat */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -545,10 +555,25 @@
 		3599CFF1168ED5650053A897 /* Tower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tower.h; sourceTree = "<group>"; };
 		3599CFF2168ED5650053A897 /* Tower.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Tower.mm; sourceTree = "<group>"; };
 		3599CFF5168EE08C0053A897 /* tower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tower.png; path = Resources/Images/Pieces/tower.png; sourceTree = "<group>"; };
-		3599CFF8168EE4520053A897 /* player.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = player.dat; sourceTree = "<group>"; };
 		3599CFFA16931A100053A897 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
-		3599CFFB16931A110053A897 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		3599CFFB16931A110053A897 /* City.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = City.mm; sourceTree = "<group>"; };
 		3599CFFD169327770053A897 /* city.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = city.png; path = Resources/Images/Pieces/city.png; sourceTree = "<group>"; };
+		3599D00B1695F4480053A897 /* Weapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weapon.h; sourceTree = "<group>"; };
+		3599D00C1695F4480053A897 /* Weapon.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Weapon.mm; sourceTree = "<group>"; };
+		3599D00F1695F87E0053A897 /* AI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AI.h; sourceTree = "<group>"; };
+		3599D0101695F87E0053A897 /* AI.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AI.mm; sourceTree = "<group>"; };
+		3599D0121695FF6B0053A897 /* Cannon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cannon.h; sourceTree = "<group>"; };
+		3599D0131695FF6C0053A897 /* Cannon.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Cannon.mm; sourceTree = "<group>"; };
+		3599D015169601C00053A897 /* cannon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cannon.png; path = Resources/Images/Pieces/cannon.png; sourceTree = "<group>"; };
+		3599D0171696B5B60053A897 /* shootIndicatorTail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shootIndicatorTail.png; path = Resources/Images/Misc/shootIndicatorTail.png; sourceTree = "<group>"; };
+		3599D0181696B5B60053A897 /* shootIndicatorTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shootIndicatorTop.png; path = Resources/Images/Misc/shootIndicatorTop.png; sourceTree = "<group>"; };
+		3599D01B1696B9590053A897 /* cannon.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = cannon.caf; path = Resources/Sound/cannon.caf; sourceTree = "<group>"; };
+		3599D01E1696BBCC0053A897 /* Projectile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Projectile.h; sourceTree = "<group>"; };
+		3599D01F1696BBCC0053A897 /* Projectile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Projectile.mm; sourceTree = "<group>"; };
+		3599D0211696BC140053A897 /* CannonBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CannonBall.h; sourceTree = "<group>"; };
+		3599D0221696BC150053A897 /* CannonBall.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CannonBall.mm; sourceTree = "<group>"; };
+		3599D024169712B90053A897 /* cannonball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cannonball.png; path = Resources/Images/Pieces/cannonball.png; sourceTree = "<group>"; };
+		3599D02616973B7E0053A897 /* player.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = player.dat; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1085,6 +1110,7 @@
 		3599CF8816805DBA0053A897 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3599D00E1695F84C0053A897 /* AI */,
 				3599CF8E1680C9240053A897 /* Menus */,
 				3599CF8C1680C7520053A897 /* Utils */,
 				3599CFE6168C6F0F0053A897 /* Player */,
@@ -1106,6 +1132,7 @@
 		3599CF89168063A00053A897 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				3599D01B1696B9590053A897 /* cannon.caf */,
 				3599CFB916845F330053A897 /* background-music.caf */,
 				3599CFBA16845F330053A897 /* backGroundMusic.caf */,
 			);
@@ -1162,6 +1189,8 @@
 		3599CF941680CD2C0053A897 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				3599D0171696B5B60053A897 /* shootIndicatorTail.png */,
+				3599D0181696B5B60053A897 /* shootIndicatorTop.png */,
 				3599CFAD1683022F0053A897 /* comboButtons.png */,
 				3599CFA51681C0910053A897 /* menuBack.png */,
 				3599CF9B16818F9D0053A897 /* stdButtons.png */,
@@ -1206,9 +1235,11 @@
 		3599CFE2168C6D740053A897 /* Pieces */ = {
 			isa = PBXGroup;
 			children = (
-				3599CFF0168ED4FE0053A897 /* Structure */,
 				3599CFE3168C6E380053A897 /* Piece.h */,
 				3599CFE4168C6E380053A897 /* Piece.mm */,
+				3599D01D1696BB270053A897 /* Projectile */,
+				3599D00A1695F40D0053A897 /* Weapon */,
+				3599CFF0168ED4FE0053A897 /* Structure */,
 			);
 			name = Pieces;
 			sourceTree = "<group>";
@@ -1230,7 +1261,7 @@
 				3599CFF1168ED5650053A897 /* Tower.h */,
 				3599CFF2168ED5650053A897 /* Tower.mm */,
 				3599CFFA16931A100053A897 /* City.h */,
-				3599CFFB16931A110053A897 /* City.m */,
+				3599CFFB16931A110053A897 /* City.mm */,
 			);
 			name = Structure;
 			sourceTree = "<group>";
@@ -1238,6 +1269,8 @@
 		3599CFF4168EE0490053A897 /* Pieces */ = {
 			isa = PBXGroup;
 			children = (
+				3599D024169712B90053A897 /* cannonball.png */,
+				3599D015169601C00053A897 /* cannon.png */,
 				3599CFFD169327770053A897 /* city.png */,
 				3599CFF5168EE08C0053A897 /* tower.png */,
 			);
@@ -1247,9 +1280,40 @@
 		3599CFF7168EE43D0053A897 /* Saves */ = {
 			isa = PBXGroup;
 			children = (
-				3599CFF8168EE4520053A897 /* player.dat */,
+				3599D02616973B7E0053A897 /* player.dat */,
 			);
 			name = Saves;
+			sourceTree = "<group>";
+		};
+		3599D00A1695F40D0053A897 /* Weapon */ = {
+			isa = PBXGroup;
+			children = (
+				3599D00B1695F4480053A897 /* Weapon.h */,
+				3599D00C1695F4480053A897 /* Weapon.mm */,
+				3599D0121695FF6B0053A897 /* Cannon.h */,
+				3599D0131695FF6C0053A897 /* Cannon.mm */,
+			);
+			name = Weapon;
+			sourceTree = "<group>";
+		};
+		3599D00E1695F84C0053A897 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				3599D00F1695F87E0053A897 /* AI.h */,
+				3599D0101695F87E0053A897 /* AI.mm */,
+			);
+			name = AI;
+			sourceTree = "<group>";
+		};
+		3599D01D1696BB270053A897 /* Projectile */ = {
+			isa = PBXGroup;
+			children = (
+				3599D01E1696BBCC0053A897 /* Projectile.h */,
+				3599D01F1696BBCC0053A897 /* Projectile.mm */,
+				3599D0211696BC140053A897 /* CannonBall.h */,
+				3599D0221696BC150053A897 /* CannonBall.mm */,
+			);
+			name = Projectile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1329,8 +1393,13 @@
 				3599CFCE1685E54F0053A897 /* bmiddleLeft.png in Resources */,
 				3599CFCF1685E54F0053A897 /* bmiddleRight.png in Resources */,
 				3599CFF6168EE08C0053A897 /* tower.png in Resources */,
-				3599CFF9168EE4520053A897 /* player.dat in Resources */,
 				3599CFFE169327780053A897 /* city.png in Resources */,
+				3599D016169601C00053A897 /* cannon.png in Resources */,
+				3599D0191696B5B60053A897 /* shootIndicatorTail.png in Resources */,
+				3599D01A1696B5B60053A897 /* shootIndicatorTop.png in Resources */,
+				3599D01C1696B9590053A897 /* cannon.caf in Resources */,
+				3599D025169712B90053A897 /* cannonball.png in Resources */,
+				3599D02716973B7E0053A897 /* player.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1487,7 +1556,12 @@
 				3599CFEC168C70320053A897 /* PlayerArea.mm in Sources */,
 				3599CFEF168CAFF00053A897 /* JSONKit.m in Sources */,
 				3599CFF3168ED5650053A897 /* Tower.mm in Sources */,
-				3599CFFC16931A120053A897 /* City.m in Sources */,
+				3599CFFC16931A120053A897 /* City.mm in Sources */,
+				3599D00D1695F4480053A897 /* Weapon.mm in Sources */,
+				3599D0111695F87E0053A897 /* AI.mm in Sources */,
+				3599D0141695FF6D0053A897 /* Cannon.mm in Sources */,
+				3599D0201696BBCC0053A897 /* Projectile.mm in Sources */,
+				3599D0231696BC160053A897 /* CannonBall.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1509,7 +1583,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1524,7 +1598,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};

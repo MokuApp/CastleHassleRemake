@@ -11,11 +11,14 @@
 #import "SimpleAudioEngine.h"
 #import "City.h"
 
+@class AI;
+
 @interface PlayerArea : Piece {
 
 }
 
 
+@property(nonatomic,retain) AI* ai;
 @property(nonatomic,retain) City* city;
 
 -(id)initWithLeft:(float)left dimentions:(CGPoint)dim;

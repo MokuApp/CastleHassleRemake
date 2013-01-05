@@ -8,14 +8,16 @@
 
 #import "Piece.h"
 #import "Battlefield.h"
+#import "PlayerArea.h"
 
 @implementation Piece
 
-@synthesize owner,currentSprite,backSprite;
+@synthesize owner,currentSprite,backSprite,world,body;
 
--(id) initWithWorld:(CGPoint)p{
+-(id)initWithWorld:(b2World *)w coords:(CGPoint)p{
     
     if ((self = [super init])) {
+        world = w;
         backSprite = nil;
         owner = nil;
     }
@@ -35,13 +37,18 @@
     self.currentSprite = spriteWithRect(image, rect);
     [[Battlefield instance] addChild:currentSprite z:[self zIndex]];
     currentSprite.position = ccp(p.x, p.y);
-    /*
-    self.backSprite = spriteWithRect(image, rect);
-    [backSprite setScale:1/BACKGROUND_SCALE_FACTOR];
-    [[Battlefield instance] addChild:backSprite z:[self zFarIndex]];
-    backSprite.position = ccp(p.x, p.y + PLAYER_BACKGROUND_HEIGHT);
-    backSprite.flipX = YES;
-    */
+    
 }
+
+-(void) finalizePiece{
+    [self finalizePieceBase];
+}
+
+-(void) finalizePieceBase{
+    body->SetType(b2_dynamicBody);
+    body->SetAwake(true);
+    
+}
+
 
 @end

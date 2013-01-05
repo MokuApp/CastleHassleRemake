@@ -27,13 +27,22 @@
 #define FAR_PIECE_Z_INDEX 2
 
 
+//weapon
+#define CANNONBALL_DENSITY .6
+
+#define CANNON_DEFAULT_POWER (1.0/250.0)
+
+#define CANNONBALL_IMAGE @"cannonball.png"
 #define CITY_IMAGE @"city.png"
 
+
 //pieces
+#define CANNON_IMAGE @"cannon.png"
 #define TOWER_IMAGE @"tower.png"
 
 
 //environment variables
+#define PIECE_DENSITY 0.1
 #define PLAYER_GROUND_HEIGHT 45.0
 #define PLAYER_GROUND_WIDTH 720.0
 #define PLAYER_BACKGROUND_HEIGHT 65.0
