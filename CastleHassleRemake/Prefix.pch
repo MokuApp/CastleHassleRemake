@@ -32,6 +32,8 @@
 
 #define CANNON_DEFAULT_POWER (1.0/250.0)
 
+#define WEAPON_MAX_POWER 220.0
+
 #define CANNONBALL_IMAGE @"cannonball.png"
 #define CITY_IMAGE @"city.png"
 

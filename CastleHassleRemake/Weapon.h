@@ -13,17 +13,17 @@
 
 @interface Weapon : Piece {
     float offset;
-    
+    float cooldown;
+    float maxCooldown;
 }
 
 @property(nonatomic) float offset;
-@property(nonatomic, retain) CCSprite *shootIndicatorTrail;
-@property(nonatomic, retain) CCSprite *shootIndicatorTop;
+@property(nonatomic) float cooldown;
+@property(nonatomic, readonly) float maxCooldown;
+
 @property(nonatomic, retain) CCSprite *cdSprite;
 
 -(void) updateSpritesAngle:(float)ang position:(b2Vec2)pos time:(float)t;
 
--(void) prepareShootIndicator:(CGPoint)touch;
--(void) shootIndicator:(CGPoint)touch;
 
 @end

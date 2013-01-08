@@ -27,9 +27,9 @@
         
         for (uint i=0; i<2; i++) {
             BOOL indexIsPlayer = i == 0;
-            if (indexIsPlayer) {
+//            if (indexIsPlayer) {
                 makeCity = YES;
-            }
+ //           }
             
             PlayerArea* playerArea = [[[PlayerArea alloc] initWithLeft:PLAYER_GROUND_WIDTH*i 
                                                             dimentions:CGPointMake(PLAYER_GROUND_WIDTH, PLAYER_GROUND_HEIGHT)] 
@@ -62,6 +62,13 @@
     }
 }
 
+-(void) addPiece:(Piece *)p forPlayer:(PlayerArea *)pa{
+    [pa addPiece:p];
+}
+
+-(PlayerArea*) getEnemyPlayerArea{
+    return [playerAreas objectAtIndex:1];
+}
 
 
 @end

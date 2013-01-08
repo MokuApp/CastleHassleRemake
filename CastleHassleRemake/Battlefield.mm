@@ -267,6 +267,8 @@ static Battlefield* instance = nil;
         [piece finalizePiece];
     }
     
+    [playerAreaManager addPiece:(Piece*)piece forPlayer:player];
+    
     [self.bin addObject:piece];
 }
 

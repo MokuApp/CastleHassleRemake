@@ -31,9 +31,9 @@
 
 
 -(void)updateSpritePosition:(b2Vec2)pos body:(b2Body *)b{
-    
-    
-    
+
+    b2Vec2 p = b2Vec2(b->GetPosition().x+0.3, b->GetPosition().y);
+    b->SetTransform(p, b->GetAngle());
 }
 
 +(float) getMass{

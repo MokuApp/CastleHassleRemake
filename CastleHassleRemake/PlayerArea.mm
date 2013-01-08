@@ -11,13 +11,17 @@
 
 @implementation PlayerArea
 
-@synthesize ai,city;
+@synthesize ai,city,pieces,left;
 
--(id)initWithLeft:(float)left dimentions:(CGPoint)dim{
+-(id)initWithLeft:(float)l dimentions:(CGPoint)dim{
     
     
     if ((self = [super init])) {
+        left = l;
         self.ai = nil;
+        self.pieces = [NSMutableArray array];
+
+        
 
     }
     return self;
@@ -25,7 +29,14 @@
 
 
 -(void)makeCityWithColor:(ccColor3B)color{
-    self.city = [[[City alloc] initWithCoords:ccp(PLAYER_GROUND_WIDTH/2, PLAYER_GROUND_HEIGHT) owner:self colorVal:color] autorelease];
+    self.city = [[[City alloc] initWithCoords:ccp(left+(PLAYER_GROUND_WIDTH/2), PLAYER_GROUND_HEIGHT) owner:self colorVal:color] autorelease];
+    [self addPiece:city];
+}
+
+-(void)addPiece:(Piece *)piece{
+    
+    [pieces addObject:piece];
+    piece.owner = self;
     
 }
 

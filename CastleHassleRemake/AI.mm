@@ -13,6 +13,7 @@
 #import "PlayerAreaManager.h"
 #import "Battlefield.h"
 #import "CannonBall.h"
+#import "City.h"
 
 @implementation AI
 
@@ -28,11 +29,19 @@
         playerArea = p;
         NSString* file = @"player";
         [[Battlefield instance] loadForPlayer:p file:file];
+        
+        for (Piece* piece in p.pieces) {
+            if ([piece isKindOfClass:[Weapon class]]) {
+                ((Weapon*)piece).cooldown = rand() % 10;
+            }
+        }
     }
     return self;
 }
 
 -(void) readyToFire:(Weapon *)w{
+    
+    w.cooldown = w.maxCooldown;
     
     float Xo = 0;
     float Yo = 0;
@@ -54,6 +63,18 @@
         
         Xo = shootingFrom.x;
         Yo = shootingFrom.y;
+        
+        PlayerArea* enemyPA = [[Battlefield instance].playerAreaManager getEnemyPlayerArea];
+        
+        for (Piece* piece in enemyPA.pieces) {
+            if ([piece isKindOfClass:[City class]]) {
+                b2Vec2 targetWeaponPosition = piece.body->GetPosition();
+                
+                CGPoint target = CGPointMake(targetWeaponPosition.x, targetWeaponPosition.y);
+                Xt = target.x;
+                Yt = target.y;
+            }
+        }
         
         d = fabs(Xt-Xo);
         float Yoffset = (Yt-Yo);

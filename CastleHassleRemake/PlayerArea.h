@@ -15,14 +15,19 @@
 
 @interface PlayerArea : Piece {
 
+    float left;
 }
 
 
+@property(nonatomic) float left;
+
 @property(nonatomic,retain) AI* ai;
 @property(nonatomic,retain) City* city;
+@property(nonatomic,retain) NSMutableArray* pieces;
+
 
 -(id)initWithLeft:(float)left dimentions:(CGPoint)dim;
 -(void) makeCityWithColor:(ccColor3B)color;
-
+-(void)addPiece:(Piece*)piece;
 
 @end

@@ -34,31 +34,40 @@
 
 -(BOOL) shootFromAICannon:(CGPoint)touch{
     
-    //[self prepareShootIndicator:ccp(0,0)];
-    //[self shootIndicator:touch];
     [self setCannonBall:touch];
     return YES;
 }
 
 -(BOOL)setCannonBall:(CGPoint)touch{
-    /*
-    if (self.shootIndicatorTrail) {
-        [[Battlefield instance] removeChild:self.shootIndicatorTrail cleanup:YES];
-    }
-    
-    if (self.shootIndicatorTop) {
-        [[Battlefield instance] removeChild:self.shootIndicatorTop cleanup:YES];
-    }
-    
-    self.shootIndicatorTrail = nil;
-    self.shootIndicatorTop = nil;
-    */
+
     [[SimpleAudioEngine sharedEngine] playEffect:@"cannon.caf"];
+    
+    float pixelsInFront = 30.0;
     
     CGPoint projectitleLoc = CGPointMake((float)self.currentSprite.position.x, (float)self.currentSprite.position.y);
     
+    float h = touch.y - 0.0;
+    float w = touch.x - 0.0;
+    
+    if (WEAPON_MAX_POWER < fabs(h)+fabs(w)) {
+        
+        h = WEAPON_MAX_POWER*(h/(fabs(h)+fabs(w)));
+        w = WEAPON_MAX_POWER*(w/(fabs(h)+fabs(w)));
+    }
+    
+    float power = b2Vec2(w,h).Length();
+    
+    if (h<0.0) {
+        h = 0.0;
+    }
+    
+    projectitleLoc.x += (w/power)*pixelsInFront;
+    projectitleLoc.y += (h/power)*pixelsInFront;
+    
     CannonBall *ball = [[[CannonBall alloc] initWithWorld:world coords:projectitleLoc shooter:self.owner] autorelease];
     [[Battlefield instance] addProjectileToBin:ball];
+    
+    ball.body->ApplyLinearImpulse(b2Vec2(w*CANNON_DEFAULT_POWER/3, h*CANNON_DEFAULT_POWER/3), ball.body->GetPosition());
 
     
     return YES;

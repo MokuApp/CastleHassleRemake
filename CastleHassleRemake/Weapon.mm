@@ -14,12 +14,13 @@
 @implementation Weapon
 
 
-@synthesize offset,shootIndicatorTop,shootIndicatorTrail,cdSprite;
+@synthesize offset,cdSprite,cooldown,maxCooldown;
 
 -(id)init{
     
     if ((self = [super init])) {
-           
+        cooldown = 0;
+        maxCooldown = 5;
     }
     return self;
 }
@@ -28,38 +29,20 @@
 
 -(void) updateSpritesAngle:(float)ang position:(b2Vec2)pos time:(float)t{
     
-    if (self.owner.ai) {
-        [self.owner.ai readyToFire:self];
+    if (self.cooldown > 0) {
+        self.cooldown -= t;
+        
+        if (self.cooldown <= 0 && self.owner) {
+            
+            self.cooldown = 0;
+            
+            if (self.owner.ai) {
+                [self.owner.ai readyToFire:self];
+            }            
+        }
     }
+    
 }
 
-
--(void) prepareShootIndicator:(CGPoint)touch{
-    /*
-    self.shootIndicatorTrail = sprite(@"shootIndicatorTail.png");
-    self.shootIndicatorTop = sprite(@"shootIndicatorTop.png");
-    
-    self.shootIndicatorTrail.position = self.currentSprite.position;
-    self.shootIndicatorTop.position = touch;
-    
-    self.shootIndicatorTrail.anchorPoint = ccp(0.5,0);
-    self.shootIndicatorTop.anchorPoint = ccp(0.5,0);
-    
-    [self.shootIndicatorTrail setScaleY:(1/130.0)];
-    
-    self.shootIndicatorTop.visible = NO;
-    self.shootIndicatorTrail.visible = NO;
-    
-    [[Battlefield instance] addChild:self.shootIndicatorTrail z:6];
-    [[Battlefield instance] addChild:self.shootIndicatorTop z:6];
-     */
-}
-
--(void)shootIndicator:(CGPoint)touch{
-    /*
-    self.shootIndicatorTop.visible = YES;
-    self.shootIndicatorTrail.visible = YES;
-     */
-}
 
 @end

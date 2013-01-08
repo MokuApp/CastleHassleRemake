@@ -20,4 +20,9 @@
 -(void)loadPlayer;
 
 
+-(void) addPiece:(Piece*)p forPlayer:(PlayerArea*)pa;
+
+-(PlayerArea*)getEnemyPlayerArea;
+
+
 @end
