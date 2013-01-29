@@ -11,7 +11,7 @@
 #import "Box2D.h"
 #import "SimpleAudioEngine.h"
 
-@class PlayerAreaManager,PlayerArea,Piece,Weapon,Projectile;
+@class PlayerAreaManager,PlayerArea,Piece,Weapon,Projectile,HUD;
 
 @interface Battlefield : CCLayer {
     
@@ -26,6 +26,7 @@
 @property(nonatomic, retain) NSMutableArray *tileables;
 @property(nonatomic, retain) PlayerAreaManager *playerAreaManager;
 @property(nonatomic, retain) NSMutableArray *bin;
+@property(nonatomic, retain) HUD* hud;
 
 
 +(Battlefield*)instance;

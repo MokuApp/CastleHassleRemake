@@ -18,7 +18,13 @@
 #define PTM_RATIO 32.0
 
 
+#define HUD_STATUS_ITEM_SIZE 60
+#define HUD_HEIGHT 57
+
+#define ICON_SPACING 15
+
 //index properties 
+#define HUD_Z_INDEX 7
 #define FOREGROUND_Z_INDEX 5
 #define MIDGROUND_Z_INDEX 3
 #define BACKGROUND_Z_INDEX 1

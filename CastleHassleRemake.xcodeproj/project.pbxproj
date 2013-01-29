@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35913F3B16B45A9A000401E0 /* HUD.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35913F3A16B45A9A000401E0 /* HUD.mm */; };
+		35913F3D16B45D7A000401E0 /* hud.png in Resources */ = {isa = PBXBuildFile; fileRef = 35913F3C16B45D7A000401E0 /* hud.png */; };
+		35913F4116B5AE1C000401E0 /* HUDMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35913F4016B5AE1C000401E0 /* HUDMenu.mm */; };
+		35913F4416B5AE40000401E0 /* HUDItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35913F4316B5AE40000401E0 /* HUDItem.mm */; };
+		35913F4716B5AE51000401E0 /* ButtonItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35913F4616B5AE51000401E0 /* ButtonItem.mm */; };
 		3599CD9C16805B780053A897 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3599CD9B16805B780053A897 /* QuartzCore.framework */; };
 		3599CD9E16805B780053A897 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3599CD9D16805B780053A897 /* OpenGLES.framework */; };
 		3599CDA016805B780053A897 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3599CD9F16805B780053A897 /* OpenAL.framework */; };
@@ -203,6 +208,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35913F3916B45A9A000401E0 /* HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUD.h; sourceTree = "<group>"; };
+		35913F3A16B45A9A000401E0 /* HUD.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HUD.mm; sourceTree = "<group>"; };
+		35913F3C16B45D7A000401E0 /* hud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hud.png; path = Resources/Images/Misc/hud.png; sourceTree = "<group>"; };
+		35913F3F16B5AE1C000401E0 /* HUDMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDMenu.h; sourceTree = "<group>"; };
+		35913F4016B5AE1C000401E0 /* HUDMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HUDMenu.mm; sourceTree = "<group>"; };
+		35913F4216B5AE40000401E0 /* HUDItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDItem.h; sourceTree = "<group>"; };
+		35913F4316B5AE40000401E0 /* HUDItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HUDItem.mm; sourceTree = "<group>"; };
+		35913F4516B5AE51000401E0 /* ButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonItem.h; sourceTree = "<group>"; };
+		35913F4616B5AE51000401E0 /* ButtonItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ButtonItem.mm; sourceTree = "<group>"; };
 		3599CD9716805B780053A897 /* CastleHassleRemake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CastleHassleRemake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3599CD9B16805B780053A897 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3599CD9D16805B780053A897 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -595,6 +609,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35913F3716B45A63000401E0 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				35913F3E16B5ADDF000401E0 /* Items */,
+				35913F3916B45A9A000401E0 /* HUD.h */,
+				35913F3A16B45A9A000401E0 /* HUD.mm */,
+				35913F3F16B5AE1C000401E0 /* HUDMenu.h */,
+				35913F4016B5AE1C000401E0 /* HUDMenu.mm */,
+			);
+			name = HUD;
+			sourceTree = "<group>";
+		};
+		35913F3E16B5ADDF000401E0 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				35913F4216B5AE40000401E0 /* HUDItem.h */,
+				35913F4316B5AE40000401E0 /* HUDItem.mm */,
+				35913F4516B5AE51000401E0 /* ButtonItem.h */,
+				35913F4616B5AE51000401E0 /* ButtonItem.mm */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
 		3599CD8C16805B770053A897 = {
 			isa = PBXGroup;
 			children = (
@@ -1116,6 +1153,7 @@
 				3599CFE6168C6F0F0053A897 /* Player */,
 				3599CFBE1685DBCE0053A897 /* Backgrounds */,
 				3599CFE2168C6D740053A897 /* Pieces */,
+				35913F3716B45A63000401E0 /* HUD */,
 				3599CF7016805B7E0053A897 /* AppDelegate.h */,
 				3599CF7116805B7E0053A897 /* AppDelegate.mm */,
 				3599CFB2168454760053A897 /* Battlefield.h */,
@@ -1189,6 +1227,7 @@
 		3599CF941680CD2C0053A897 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				35913F3C16B45D7A000401E0 /* hud.png */,
 				3599D0171696B5B60053A897 /* shootIndicatorTail.png */,
 				3599D0181696B5B60053A897 /* shootIndicatorTop.png */,
 				3599CFAD1683022F0053A897 /* comboButtons.png */,
@@ -1400,6 +1439,7 @@
 				3599D01C1696B9590053A897 /* cannon.caf in Resources */,
 				3599D025169712B90053A897 /* cannonball.png in Resources */,
 				3599D02716973B7E0053A897 /* player.dat in Resources */,
+				35913F3D16B45D7A000401E0 /* hud.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1562,6 +1602,10 @@
 				3599D0141695FF6D0053A897 /* Cannon.mm in Sources */,
 				3599D0201696BBCC0053A897 /* Projectile.mm in Sources */,
 				3599D0231696BC160053A897 /* CannonBall.mm in Sources */,
+				35913F3B16B45A9A000401E0 /* HUD.mm in Sources */,
+				35913F4116B5AE1C000401E0 /* HUDMenu.mm in Sources */,
+				35913F4416B5AE40000401E0 /* HUDItem.mm in Sources */,
+				35913F4716B5AE51000401E0 /* ButtonItem.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

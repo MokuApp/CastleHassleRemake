@@ -16,6 +16,7 @@
 #import "Cannon.h"
 #import "City.h"
 #import "Projectile.h"
+#import "HUD.h"
 
 #import "AppDelegate.h"
 #import "JSONKit.h"
@@ -23,7 +24,7 @@
 
 @implementation Battlefield
 
-@synthesize tileables,playerAreaManager,world,bin;
+@synthesize tileables,playerAreaManager,world,bin,hud;
 
 static Battlefield* instance = nil;
 
@@ -105,8 +106,12 @@ static Battlefield* instance = nil;
         
         [self schedule: @selector(tick:)];
         
+        self.hud = [[[HUD alloc] init] autorelease];
+        
         screenMomentum = 0.0;
         [self moveScreen];
+        
+        
         
     }
     return self;
@@ -136,7 +141,7 @@ static Battlefield* instance = nil;
             piece.currentSprite.rotation = -1 * CC_RADIANS_TO_DEGREES(ang);
             
             if ([piece isKindOfClass:[Weapon class]]) {
-                [(Weapon*)piece updateSpritesAngle:ang position:pos time:dt];
+                //[(Weapon*)piece updateSpritesAngle:ang position:pos time:dt];
             }
             if ([piece isKindOfClass:[City class]]) {
 
@@ -193,6 +198,7 @@ static Battlefield* instance = nil;
     float x,y,z;
     [self.camera centerX:&x centerY:&y centerZ:&z];
     
+    [hud moveAllObjects:delta];
     [self tileImagePool:CGPointMake(x, y) delta:delta];
     
     [self.camera setCenterX:x-(delta.x) centerY:y centerZ:0.0];
