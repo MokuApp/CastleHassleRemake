@@ -12,7 +12,7 @@
 
 @implementation HUDMenu
 
-@synthesize items;
+@synthesize items,selected;
 
 -(id)init{
     
@@ -76,5 +76,34 @@
     }
 }
 
+-(BOOL) handleInitialTouch:(CGPoint)p{
+    
+    if (CGRectContainsPoint([self hudRect], p)) {
+        self.selected = [self getHUDItem:p];
+        
+        if (!selected) return NO;
+        
+        [selected handleInitialTouch:p];
+        
+        return YES;
+    }
+    return NO;
+}
+
+
+-(CGRect) hudRect{
+    
+    return CGRectMake(0, 320-HUD_HEIGHT, 480, HUD_HEIGHT);
+}
+
+-(HUDItem*)getHUDItem:(CGPoint)p{
+    
+    for (HUDItem *item in items) {
+        if (item.leftBound < p.x && item.rightBound > p.x) {
+            return item;
+        }
+    }
+    return nil;
+}
 
 @end

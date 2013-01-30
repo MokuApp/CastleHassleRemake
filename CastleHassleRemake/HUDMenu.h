@@ -15,7 +15,10 @@
     float extremeRight;
 }
 
+@property(nonatomic, retain) HUDItem *selected;
 @property(nonatomic, retain) NSMutableArray* items;
+
+-(HUDItem*) getHUDItem:(CGPoint)p;
 
 -(void)moveAllObjects:(CGPoint)p;
 
@@ -30,5 +33,10 @@
 
 -(void)showAll;
 -(void)hideAll;
+
+
+-(BOOL)handleInitialTouch:(CGPoint)p;
+
+-(CGRect) hudRect;
 
 @end

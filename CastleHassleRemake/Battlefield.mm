@@ -162,6 +162,8 @@ static Battlefield* instance = nil;
     initialTouch = [self transformTouchesToPoint:touches withCameraOffset:NO];
     screenMomentum = 0.0;
     
+    
+    [hud handleInitialTouch:initialTouch];
 }
 
 -(void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{

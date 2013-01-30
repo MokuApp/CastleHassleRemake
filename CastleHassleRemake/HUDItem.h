@@ -25,5 +25,6 @@
 -(void)show;
 
 -(void)move:(CGPoint)p;
+-(BOOL)handleInitialTouch:(CGPoint)p;
 
 @end

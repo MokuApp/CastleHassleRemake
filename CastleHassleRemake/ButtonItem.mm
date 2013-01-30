@@ -8,6 +8,7 @@
 
 #import "ButtonItem.h"
 #import "Battlefield.h"
+#import "HUDActionController.h"
 
 
 @implementation ButtonItem
@@ -44,6 +45,11 @@
 -(void)move:(CGPoint)p{
     [super move:p];
     buttonText.position = CGPointMake(buttonText.position.x - p.x, buttonText.position.y);
+}
+
+-(BOOL) handleInitialTouch:(CGPoint)p{
+    [[HUDActionController instance] performSelector:func];
+    return YES;
 }
 
 @end

@@ -11,15 +11,18 @@
 #import "HUDMenu.h"
 #import "HUDItem.h"
 #import "ButtonItem.h"
+#import "HUDActionController.h"
 
 
 @implementation HUD
 
-@synthesize tabUpSprite,tabDownSprite,tabSprite,mainMenu,inFocus;
+@synthesize tabUpSprite,tabDownSprite,tabSprite,mainMenu,inFocus,buildMenu;
 
 -(id)init{
     
     if ((self = [super init])) {
+        
+        [[HUDActionController instance] setHud:self];
         
         self.tabUpSprite = spriteWithRect(@"hud.png", CGRectMake(184, 58, 112, 22));
         tabUpSprite.position = CGPointMake(480.0/2.0, 320.0-HUD_HEIGHT-(22.0/2.0));
@@ -38,6 +41,7 @@
         [[Battlefield instance] addChild:tabDownSprite z:HUD_Z_INDEX];
         [[Battlefield instance] addChild:tabSprite z:HUD_Z_INDEX];
         
+        [self initBuildMenu];
         [self initMainMenu];
         [self showMainMenu];
 
@@ -57,7 +61,45 @@
         [inFocus moveAllObjects:p];
     }
     
+}
+
+
+-(void) expandMenu {
     
+    menuIsHidden = NO;
+    [tabDownSprite setVisible:NO];
+    [tabUpSprite setVisible:YES];
+    [tabSprite setVisible:YES];
+    [self showMainMenu];
+}
+
+-(void) collapseMenu{
+    
+    menuIsHidden = YES;
+    [tabDownSprite setVisible:YES];
+    [tabUpSprite setVisible:NO];
+    [tabSprite setVisible:NO];
+    [self hideMenu];
+}
+
+-(BOOL) handleInitialTouch:(CGPoint)p{
+    
+    
+    if (CGRectContainsPoint([self tabRect], p)) {
+        if (menuIsHidden) {
+            [self expandMenu];
+        }else{
+            [self collapseMenu];
+        }
+        
+        return YES;
+    }
+    
+    if (inFocus != nil) {
+        return [inFocus handleInitialTouch:p];
+    }
+    
+    return NO;
 }
 
 -(void)initMainMenu{
@@ -83,6 +125,20 @@
     [mainMenu hideAll];
 }
 
+-(void)initBuildMenu{
+    
+    self.buildMenu = [[[HUDMenu alloc] init] autorelease];
+    
+    ButtonItem* leftBtn = [buildMenu addButtonItemWithImageName:@"stdButtons.png"  
+                                                       imageBox:CGRectMake(105, 78, 38, 37) 
+                                                  swingImageBox:CGRectMake(0, 0, 0, 0) 
+                                                       selector:@selector(showMainMenu) 
+                                                          title:@""];
+    [leftBtn.img setOpacity:100.0f];
+    
+    
+    [buildMenu hideAll];
+}
 
 -(void)showMenu:(HUDMenu *)menu{
     [self hideMenu];
@@ -95,16 +151,30 @@
 }
 
 -(void)showBuildMenu{
-    
+    [self showMenu:buildMenu];
 }
 
--(void)showSetting{
+-(void)showSettings{
     
 }
 
 -(void)hideMenu{
     [inFocus hideAll];
     inFocus = nil;
+}
+
+-(CGRect) tabRect{
+    
+    if (menuIsHidden) 
+        return CGRectMake((480-tabUpSprite.textureRect.size.width)/2.0, 
+                          320-tabUpSprite.textureRect.size.height, 
+                          tabUpSprite.textureRect.size.width, 
+                          tabUpSprite.textureRect.size.height);
+    else
+        return CGRectMake((480-tabUpSprite.textureRect.size.width)/2.0, 
+                          320-HUD_HEIGHT-tabUpSprite.textureRect.size.height, 
+                          tabUpSprite.textureRect.size.width, 
+                          tabUpSprite.textureRect.size.height);
 }
 
 @end

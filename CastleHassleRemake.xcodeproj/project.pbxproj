@@ -12,6 +12,7 @@
 		35913F4116B5AE1C000401E0 /* HUDMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35913F4016B5AE1C000401E0 /* HUDMenu.mm */; };
 		35913F4416B5AE40000401E0 /* HUDItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35913F4316B5AE40000401E0 /* HUDItem.mm */; };
 		35913F4716B5AE51000401E0 /* ButtonItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35913F4616B5AE51000401E0 /* ButtonItem.mm */; };
+		35913F4A16B8300C000401E0 /* HUDActionController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35913F4916B8300B000401E0 /* HUDActionController.mm */; };
 		3599CD9C16805B780053A897 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3599CD9B16805B780053A897 /* QuartzCore.framework */; };
 		3599CD9E16805B780053A897 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3599CD9D16805B780053A897 /* OpenGLES.framework */; };
 		3599CDA016805B780053A897 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3599CD9F16805B780053A897 /* OpenAL.framework */; };
@@ -217,6 +218,8 @@
 		35913F4316B5AE40000401E0 /* HUDItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HUDItem.mm; sourceTree = "<group>"; };
 		35913F4516B5AE51000401E0 /* ButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonItem.h; sourceTree = "<group>"; };
 		35913F4616B5AE51000401E0 /* ButtonItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ButtonItem.mm; sourceTree = "<group>"; };
+		35913F4816B8300A000401E0 /* HUDActionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDActionController.h; sourceTree = "<group>"; };
+		35913F4916B8300B000401E0 /* HUDActionController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HUDActionController.mm; sourceTree = "<group>"; };
 		3599CD9716805B780053A897 /* CastleHassleRemake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CastleHassleRemake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3599CD9B16805B780053A897 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3599CD9D16805B780053A897 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -617,6 +620,8 @@
 				35913F3A16B45A9A000401E0 /* HUD.mm */,
 				35913F3F16B5AE1C000401E0 /* HUDMenu.h */,
 				35913F4016B5AE1C000401E0 /* HUDMenu.mm */,
+				35913F4816B8300A000401E0 /* HUDActionController.h */,
+				35913F4916B8300B000401E0 /* HUDActionController.mm */,
 			);
 			name = HUD;
 			sourceTree = "<group>";
@@ -1606,6 +1611,7 @@
 				35913F4116B5AE1C000401E0 /* HUDMenu.mm in Sources */,
 				35913F4416B5AE40000401E0 /* HUDItem.mm in Sources */,
 				35913F4716B5AE51000401E0 /* ButtonItem.mm in Sources */,
+				35913F4A16B8300C000401E0 /* HUDActionController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
